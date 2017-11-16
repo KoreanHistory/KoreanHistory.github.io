@@ -1,0 +1,28 @@
+ethereum vega
+
+Innovative monetary platform with a cutting-edge technology.
+
+
+What is Ethereum Vega?
+
+Ethereum Vega is a decentralized monetary platform based on cutting-edge blockchain technology. It provides an ecosystem for building non-stop applications that run decentralized services without any possibility of downtime, censorship, fraud or third party interference that comes from centralized governance.
+
+
+Ethereum WETH page
+
+
+What is WETH?
+
+Went-ethereum is a full node implementation of the Ethereum Vega protocol. It is a forked version of the original go-implementation of Ethereum protocol (called geth), With a future roadmap of sound currency, Went-ethereum client allows an access to one of a large blockchain network.
+
+Performance
+
+A fork of go-ethereum , WETH enables you to build some lighter blockchain applications with improved code quality. Development follows a process of continuous integration, based on javascript console interfaces along with WEB.3 api.
+
+Trustable
+
+WETH implements Ethereum Vega protocol. As Ethereum Vega provides modern rule of monetary, investors, miners and developers can provide their financial services via WETH.
+
+Immutable
+
+With decentralized governance, WETH provides decentralized blockchain platform using distributed networks and the consensus protocol inherent in WETH protocol.  
