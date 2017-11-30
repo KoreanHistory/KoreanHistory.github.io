@@ -3,172 +3,192 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <title>Lee Hui-Young</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#000000">  
-    <title>Lee Hui-Young</title>
+    <meta name="theme-color" content="#725b53">
 
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-indigo.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--@@@@@@@@@@@@@@@@@@@@classes@@@@@@@@@@@@@@@@@@@@-->
+    <link rel="stylesheet" href="jquery-ui.min.css">
     <style>
-        body, h1, h2, h3, h4, h5, h6, a, span {
-            font-family: 'Josefin Sans', sans-serif !important;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
         }
-        body, html {
-            height: 100%;
-            line-height: 1.8;
+        p, a {
+            font-size: 1.5em;
         }
-        p {
-            font-size: 18px;
+        h5 {
+            font-size: 1.6em;
         }
-        ::-webkit-scrollbar { 
-            display: none; 
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .pink {
+            color: #e91e63;
+        }
+        .gray {
+            color: #707070;
+        }
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+        @-webkit-keyframes animatebottom {
+            from { bottom:-100px; opacity:0 }
+            to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom {
+            from{ bottom:-100px; opacity:0 }
+            to{ bottom:0; opacity:1 }
+        }
+        @media screen and (max-width: 1024px){
+            .mdl-layout__header {
+                display: inherit;
+            }
         }
     </style>
 </head>
 
-<body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">  
-    
-    <!--@@@@@@@@@@@@@@@@@@@@header@@@@@@@@@@@@@@@@@@@@-->
-    <header class="mdl-layout__header" style="background-color:#725b53">
-        <div class="mdl-layout-icon" style="text-align:right;"><img src="images/LOGO.jpg" height="100%" /></div>
+<body style="background-color:#725b53">
+
+    <header id="nav" class="mdl-layout__header" style="position:fixed;width:100%;z-index:2;background-color:#725b53;color:white">
+        <div class="mdl-layout-icon" style="text-align:right;" onclick="document.getElementById('lname').click();"><img src="images/LOGO.jpg" height="100%" /></div>
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title"><span class="mdl-cell--hide-phone">우당</span> <b>이회영</b></span>
-            <div class="mdl-layout-spacer"></div>
-            <div style="background-color:#4caf50;">
-               
-            </div>
-            <!-- </nav> -->
+            <a class="mdl-navigation__link" href="#b0" id="lname"><span onclick="document.getElementById('lname').click();" class="mdl-layout-title">우당 이회영</span></a>
         </div>
     </header>
 
-    <main class="mdl-layout__content">
-        <!--@@@@@@@@@@@@@@@@@@@@title@@@@@@@@@@@@@@@@@@@@-->
-        <div class="mdl-grid" style="background-image:url('images/BG.jpg');background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-position:center bottom;color:white;padding:5em;">
-            <div class="mdl-cell mdl-cell--5-col" style="text-align:center;">
-                <h2>600억 자산의 사나이</h2><h1><b>우당 이회영</b></h1>
-                <h5 style="color:#434546">흔하지 않은 금수저의 인생</h5>
+    <div id="loading" style="height:100%;background-color:#725b53;position:fixed;z-index:1;"></div>
+
+    <main class="mdl-layout__content animate-bottom" style="width:100%;display:none;" id="main">
+        <div id="b1" style="background-image:url('images/BG.jpg');background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-position:center bottom;color:white;padding:3em;">
+            <div class="mdl-grid" style="padding-top:5em;padding-bottom:3em;">
+                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="text-align:center">
+                    <h2>600억 자산의 사나이</h2><h2><b>우당 이회영</b></h2>
+                    <h4 style="color:#434546">흔하지 않은 금수저의 인생</h4>
+                </div>
+                <div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--4-col-phone"></div>
             </div>
-            <div class="mdl-cell mdl-cell--1-col"></div>
-            <div class="mdl-cell mdl-cell--6-col"></div>
-            <div style="padding-top:5em;">
-                <p><b>Ethereum Vega</b> is a decentralized monetary platform based on cutting-edge blockchain technology.</p><p class="mdl-cell--hide-phone">It provides an ecosystem for building non-stop applications that run decentralized services without any possibility of downtime, censorship, fraud or third party interference that comes from centralized governance.</p>
-            </div>            
+            <div style="padding-top:3em;">
+                <p><b>우당 이회영</b>은 으어어어어어어어</p>
+            </div>   
         </div>
 
-        <!--@@@@@@@@@@@@@@@@@@@@about(ethVEGA)@@@@@@@@@@@@@@@@@@@@-->
-        
-
-        <!--@@@@@@@@@@@@@@@@@@@@about(WETH)@@@@@@@@@@@@@@@@@@@@-->
-        <div class="mdl-grid" style="background-color:white;color:black;padding:3em;">
-            <div class="mdl-cell mdl-cell--3-col">
-                <img src="images/img1.jpg" width="120%" />
-            </div>
-            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
-            <div class="mdl-cell mdl-cell--8-col">
-                <h3 style="color:#34515e;">What is WETH?</h2>
-                <p>Went-ethereum is a full node implementation of the Ethereum Vega protocol. It is a forked version of the original go-implementation of Ethereum protocol (called geth), With a future roadmap of sound currency, Went-ethereum client allows an access to one of a large blockchain network.</p>
-            </div>
-        </div>
-
-        <!--@@@@@@@@@@@@@@@@@@@@performance@@@@@@@@@@@@@@@@@@@@-->
-        <div class="mdl-grid" style="background-color:#d1b7ad;color:black;padding:3em;">
-            <div class="mdl-cell mdl-cell--8-col">
-                <h3 style="color:#37474f;">Performance</h2>
-                <p>A fork of go-ethereum, WETH enables you to build some lighter blockchain applications with improved code quality. Development follows a process of continuous integration, based on javascript console interfaces along with WEB.3 api.</p>
-            </div>
-            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
-            <div class="mdl-cell mdl-cell--3-col">
-                <img src="images/" width="100%" />
-            </div>
-        </div>
-
-        <!--@@@@@@@@@@@@@@@@@@@@trustable@@@@@@@@@@@@@@@@@@@@-->
-        <div class="mdl-grid" style="background-color:white;color:black;padding:3em;">
-            <div class="mdl-cell mdl-cell--3-col">
-                <img src="images/img3.png" width="100%" />
-            </div>
-            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
-            <div class="mdl-cell mdl-cell--8-col">
-                <h3 style="color:#34515e;">Trustable</h2>
-                <p>WETH implements Ethereum Vega protocol. As Ethereum Vega provides modern rule of monetary, investors, miners and developers can provide their financial services via WETH.</p>
+        <div id="b2" style="background-color:#ffffff;padding:3em;padding-top:7em;text-align:center;color:black;">
+            <h4>"이루고 못 이루고는 하늘에 맡기고 사명과 의무를 다하려다가 죽는 것이 얼마나 떳떳하고 가치 있는가."</h4>
+            <br />
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
+                    <p class="pink" style="font-size:4rem">2조</p>
+                    <p class="gray">현재 가치로 환산한 당시 그의 자산</p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
+                    <p class="pink" style="font-size:4rem">123</p>
+                    <p class="gray">세계에서 가장 강력한 보안 시스템</p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
+                    <p class="pink" style="font-size:4rem">456</p>
+                    <p class="gray">언제나, 어디서나</p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="text-align:center">
+                    <p class="pink" style="font-size:4rem">789</p>
+                    <p class="gray">신속한 피어 투 피어 거래</p>
+                </div>
             </div>
         </div>
 
-        <!--@@@@@@@@@@@@@@@@@@@@immutable@@@@@@@@@@@@@@@@@@@@-->
-        <div class="mdl-grid" style="background-color:#d1b7ad;color:black;padding:3em;">
-            <div class="mdl-cell mdl-cell--8-col">
-                <h3 style="color:#37474f;">Immutable</h2>
-                <p>With decentralized governance, WETH provides decentralized blockchain platform using distributed networks and the consensus protocol inherent in WETH protocol.</p>
+        <div id="b3" style="background-color:white;padding:3em;text-align:center;" class="bg">
+            <div class="mdl-grid" style="background-color:#d1b7ad;color:black;padding:3em;">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <h3 style="color:#37474f;">무슨 시기더라</h2>
+                    <p>아그랑그알아그라ㅡ으라글아ㅡ라ㅡㅇㄱ르아르ㅏㅡㅏ르악르ㅏ으라윽르아ㅡ라ㅡ아르ㅏ으라ㅡㅇㄱ</p>
+                </div>
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    <img src="images/img2.png" width="100%" />
+                </div>
             </div>
-            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
+            <div class="mdl-grid" style="background-color:white;color:black;padding:3em;">
+                <div class="mdl-cell mdl-cell--3-col">
+                    <img src="images/img3.png" width="100%" />
+                </div>
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
+                <div class="mdl-cell mdl-cell--8-col">
+                    <h3 style="color:#34515e;">네, 다음 시기</h2>
+                    <p>아글ㅇ알으ㅏㄱ르아라으ㅏ르ㅡ가ㅏㅡㅏ으가르아르응ㄱㄹㅇ르아르ㅏㅇㄹ으ㅏ릉라을ㅇㄹ그ㅏ으라으라ㅡ아글</p>
+                </div>
+            </div>
+            <div class="mdl-grid" style="background-color:#d1b7ad;color:black;padding:3em;">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <h3 style="color:#37474f;">마지막 시기</h2>
+                    <p>ㅇㄱ릉ㄱ르아ㅡ라ㅡ아그라ㅡ알그ㅏ을가ㅡ아르가을가ㅡ알그ㅏ으라ㅡ알그ㅏ을가ㅡ아ㅡㄹ그아ㅡㄱ라ㅡ아글</p>
+                </div>
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    <img src="images/img3.png" width="100%" />
+                </div>
+            </div>
         </div>
 
-        <!--@@@@@@@@@@@@@@@@@@@@footer@@@@@@@@@@@@@@@@@@@@-->
-        <footer class="mdl-mini-footer" style="background-color:#29434e;padding-left:3em;padding-right:3em;">
-            <div class="mdl-mini-footer__left-section">
-            <div class="mdl-logo">Ethereum VEGA</div>
-            <ul class="mdl-mini-footer__link-list">  
-                <li><a href="https://twitter.com/ethereumvega"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.reddit.com/user/ethereumvega/"><i class="fa fa-reddit-alien"></i></a></li>
-                <li><a href="https://www.github.com/ethereumvega"><i class="fa fa-git"></i></a></li>
-                <li><a href="http://ethereumvega.org"><img src="images/logolink.jpg" width="12%"></i></a></li>
-            </ul>
-            </div>
-            <div class="mdl-mini-footer__right-section">
-                <button id="show-dialog2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised">Donate to support</button>
-                <dialog class="mdl-dialog" id="dialog2">
-                    <h4 class="mdl-dialog__title">Support us!</h4>
-                    <div class="mdl-dialog__content">
-                        <p>abcdefghijklmnop</p>
+        <div style="background:linear-gradient(#fafafa ,#725b53);height:300px;"></div>
+        <div id="contact" style="background-color:#725b53;padding:3em;padding-top:6em;position:inherit;color:white;">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="padding:2em;">
+                    <div>
+                        <h3>자료 출처</h3>
+                        <a href="https://twitter.com/btcplt" class="hov" style="color:white;"><i class="fa fa-twitter" style="font-size:25px;margin-right:5px;color:white;"></i></a>
+                        <a href="https://www.reddit.com/r/bitcoinplatinum" class="hov" style="color:white;"><i class="fa  fa-reddit-alien" style="font-size:25px;margin-right:5px;color:white;"></i></a>
+                        <a href="https://www.github.com/bitcoinplatinum" class="hov" style="color:white;"><i class="fa fa-git" style="font-size:25px;margin-right:5px;color:white;"></i></a>
+                        <a href="https://bitcoinplatinum.slack.com/join/shared_invite/enQtMjcwMDUyMDA4OTY1LTM3N2I2YzU3NjE1OWFkY2ZiNmQxYjJjOGQ3YWViOTJiZjQxMWFkMTUyMjJlNzM0ZTliNDcwZWFjZGFlOWZhZjY" class="hov" style="color:white;"><i class="fa fa-slack" style="font-size:25px;margin-right:5px;color:white;"></i></a>
                     </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button send2">Donate</button>
-                        <button type="button" class="mdl-button close2">Cancle</button>
-                    </div>
-                </dialog>
-                <script>
-                    var dialog2 = document.getElementById('dialog2');
-                    var showDialogButton2 = document.querySelector('#show-dialog2');
-                    if (! dialog2.showModal) {
-                        dialogPolyfill.registerDialog(dialog2);
-                    }
-                    showDialogButton2.addEventListener('click', function() {
-                        dialog2.showModal();
-                    });
-                    dialog2.querySelector('.send2').addEventListener('click', function() {
-                        dialog2.close();
-                    });
-                    dialog2.querySelector('.close2').addEventListener('click', function() {
-                        dialog2.close();
-                    });
-                </script>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="padding:2em;">
+                    <h3>개발자</h3>
+                    <a href="https://www.facebook.com/profile.php?id=100006127271393" class="hov" style="font-size:20px;margin-right:5px;color:white;">11316 배성필</a><br /><br />
+                    <a href="https://www.facebook.com/profile.php?id=100009044813637" class="hov" style="font-size:20px;margin-right:5px;color:white;">11333 허이섭</a>
+                </div>
+            </div>
+        </div>
+        <footer class="mdl-mega-footer" style="background-color:#725b53;">
+            <div class="mdl-mega-footer__middle-section">
+                <div class="mdl-mega-footer__bottom-section">
+                    <div class="mdl-logo" onclick="location.assign('http://www.kyunggi.hs.kr')">경기고등학교</div>
+                </div>
             </div>
         </footer>
     </main>
-    
 
-    <!--@@@@@@@@@@@@@@@@@@@@toast@@@@@@@@@@@@@@@@@@@@-->
-    <div id="msgsent" class="mdl-js-snackbar mdl-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
-    </div>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
     <script>
-        function toast(){
-            var snackbarContainer = document.querySelector('#msgsent');
-            var data = {message: 'Message sent succesfully'};
-            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        window.onload = function(){
+            document.getElementById("main").style.display = "";
+            document.getElementById("loading").style.display = "none";
+            var h = window.innerHeight;
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop:$(hash).offset().top
+                    }, 2000, 'easeInOutQuint');
+                }
+            });
         }
-    </script>
-
-
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>    
-    <script>
-        var h = window.screen.height;
     </script>
 </body>
 </html>
